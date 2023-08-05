@@ -17,9 +17,24 @@ body{
     padding: 0px;
 }
 
-#hangman{
-    height: 50%;
+#container{
+    height: 40%;
     width: 60%;
     margin: 3em auto;
     border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+#word{
+    font-size: 3em;
+}
+#word span{
+    border-bottom: 2px solid black;
+}
+
+#hangman{
+    height: 20em;
+}
+
