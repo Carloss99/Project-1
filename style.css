@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+#title{
+    width: 60vw;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#title span{
+    font-size: 3em;
+    border-bottom: 2px solid black;
+    padding: 0px;
+}
+
+#hangman{
+    height: 50%;
+    width: 60%;
+    margin: 3em auto;
+    border: 1px solid black;
+}
