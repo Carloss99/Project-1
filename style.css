@@ -2,6 +2,11 @@ body{
     margin: 0;
     box-sizing: border-box;
     height: 100vh;
+    width:100vw;
+    color: black;
+    font-weight: bold;
+    font-family: "Chalkboard";
+    background-image: linear-gradient(to bottom right, #00C0FF, #4218B8);
 }
 
 #title{
@@ -15,26 +20,99 @@ body{
     font-size: 3em;
     border-bottom: 2px solid black;
     padding: 0px;
+    box-shadow: 5px 10px 30px black;
 }
 
 #container{
     height: 40%;
     width: 60%;
     margin: 3em auto;
-    border: 1px solid black;
+    border: 8px solid black;
+    border-radius: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: white;
+    color: black;
+    box-shadow: 20px 20px 40px black;
 }
 
 #word{
     font-size: 3em;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
 }
 #word span{
     border-bottom: 2px solid black;
+    padding: 15px;
 }
 
 #hangman{
-    height: 20em;
+    height: 100%;
 }
 
+.display {
+    visibility: hidden;
+}
+#container2{
+    width: 60%;
+    margin: auto;
+    display:flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2em;
+    
+}
+#input, #submit {
+   height: 2em;
+   border-radius: 5px;
+   text-align: center;
+   font-size: 1em;
+}
+
+@media screen and (max-width: 600px){
+    #container{
+        width: 90vw;
+        margin: auto;
+        flex-direction: column;
+    }
+    #word{
+        width: 90%;
+        margin: 20px auto;
+        border: 1px solid black;
+    }
+    #word span{
+        padding: 0;
+    }
+    #hangman{
+        height: 80%;
+    }
+    body{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
+    #container2{
+        flex-direction: column;
+        font-size: 1.2em;
+        margin: 50px auto;
+        width: 100vw;
+        
+    }
+    #input , #submit{
+        width: 50%;
+        margin: 10px;
+    }
+    #container2 h1{
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+}
