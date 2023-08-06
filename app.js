@@ -4,6 +4,7 @@ fetch("https://random-word-api.vercel.app/api?words=3&length=6&type=capitalized"
 .then((w) => {
     console.log(w)
     let words = w
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     let currentWord = 0
     let incorrect = 0
     let matchTotal= 0
@@ -13,6 +14,7 @@ fetch("https://random-word-api.vercel.app/api?words=3&length=6&type=capitalized"
     let hangman = document.querySelector("#hangman")
     
     setWord()
+    setKeyboard()
   
     enterButton.addEventListener('click', (e) =>{
         let spans = wordcontainer.childNodes
@@ -27,6 +29,7 @@ fetch("https://random-word-api.vercel.app/api?words=3&length=6&type=capitalized"
                 currentWord++
                 setWord()
                 hangman.setAttribute('src', `images/stage0.png`)
+                alert("all done!")
             }, 5000)
             
         }
@@ -74,7 +77,14 @@ fetch("https://random-word-api.vercel.app/api?words=3&length=6&type=capitalized"
 
 
 
-
+    function setKeyboard() {
+        let keyboard = document.querySelector("#keyboard")
+        for(let i = 0; i < alphabet.length; i++){
+            let letter = document.createElement("span")
+            letter.innerHTML = alphabet[i]
+            keyboard.appendChild(letter)
+        }
+    }
 
 
     function setWord () {

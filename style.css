@@ -6,21 +6,21 @@ body{
     color: black;
     font-weight: bold;
     font-family: "Chalkboard";
-    background-image: linear-gradient(to bottom right, #00C0FF, #4218B8);
+    background-color: blue;
 }
 
 #title{
     width: 60vw;
-    margin: 30px auto;
+    margin: 20px auto;
     display: flex;
     justify-content: space-around;
 }
 
 #title span{
-    font-size: 3em;
-    border-bottom: 2px solid black;
+    font-size: 4em;
+    border-bottom: 5px solid black;
     padding: 0px;
-    box-shadow: 5px 10px 30px black;
+    
 }
 
 #container{
@@ -34,7 +34,7 @@ body{
     align-items: center;
     background-color: white;
     color: black;
-    box-shadow: 20px 20px 40px black;
+    box-shadow: 10px 10px 40px black;
 }
 
 #word{
@@ -57,22 +57,43 @@ body{
 }
 #container2{
     width: 60%;
+    height: 30%;
     margin: auto;
-    display:flex;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
+    text-align: center;
     font-size: 1.2em;
-    
+}
+#container2 h2 {
+    display: inline;
 }
 #input, #submit {
-   height: 2em;
+   height: 1.5em;
+   display: inline;
    border-radius: 5px;
    text-align: center;
    font-size: 1em;
 }
+#keyboard{
+    font-size: 3em;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    gap: 40px;
+    line-height: 30px;
+}
 
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 1200px){
+    #container{
+        width: 80vw;
+    
+    }
+    #container2{
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 800px){
     #container{
         width: 90vw;
         margin: auto;
@@ -81,13 +102,12 @@ body{
     #word{
         width: 90%;
         margin: 20px auto;
-        border: 1px solid black;
     }
     #word span{
         padding: 0;
     }
     #hangman{
-        height: 80%;
+        height: 90%;
     }
     body{
         background-repeat: no-repeat;
@@ -115,4 +135,19 @@ body{
         text-align: center;
     }
 
+    #keyboard{
+        font-size:2em;
+        width: 90vw;
+    }
+    
+
 }
+@media screen and (max-width: 400px){
+    #container2 h2{
+        width: 80vw;
+        
+    }
+}
+
+
+    
