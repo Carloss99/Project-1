@@ -6,7 +6,7 @@ body{
     color: black;
     font-weight: bold;
     font-family: "Chalkboard";
-    background-color: blue;
+    background-color: chartreuse;
 }
 
 #title{
@@ -24,7 +24,7 @@ body{
 }
 
 #container{
-    height: 40%;
+    height: 30%;
     width: 60%;
     margin: 3em auto;
     border: 8px solid black;
@@ -39,20 +39,23 @@ body{
 
 #word{
     font-size: 3em;
+    padding: 10px;
     width: 50%;
     display: flex;
     justify-content: space-between;
 }
-#word span{
+
+#word div{
     border-bottom: 2px solid black;
     padding: 15px;
+    width: .5em;
 }
 
 #hangman{
     height: 100%;
 }
 
-.display {
+.no-display {
     visibility: hidden;
 }
 #container2{
@@ -61,6 +64,7 @@ body{
     margin: auto;
     text-align: center;
     font-size: 1.2em;
+    
 }
 #container2 h2 {
     display: inline;
@@ -71,15 +75,22 @@ body{
    border-radius: 5px;
    text-align: center;
    font-size: 1em;
+   cursor: pointer;
 }
 #keyboard{
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 30px auto;
+    padding: 10px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap:wrap;
     gap: 40px;
     line-height: 30px;
+}
+
+#keyboard span:hover{
+    font-size: 1.3em;
+    cursor: pointer;
 }
 
 
@@ -97,7 +108,6 @@ body{
     #container{
         width: 90vw;
         margin: auto;
-        flex-direction: column;
     }
     #word{
         width: 90%;
@@ -107,7 +117,8 @@ body{
         padding: 0;
     }
     #hangman{
-        height: 90%;
+        height: 80%;
+        margin: auto;
     }
     body{
         background-repeat: no-repeat;
@@ -119,19 +130,19 @@ body{
     }
 
     #container2{
-        flex-direction: column;
         font-size: 1.2em;
         margin: 50px auto;
         width: 100vw;
         
     }
     #input , #submit{
-        width: 50%;
+        width: 30%;
         margin: 10px;
     }
-    #container2 h1{
+    #container2 h2{
+        display:block;
         width: 100%;
-        margin: 20px auto;
+        margin:  auto;
         text-align: center;
     }
 
@@ -142,10 +153,16 @@ body{
     
 
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 600px){
     #container2 h2{
         width: 80vw;
         
+    }
+    #title{
+        font-size: .6em;
+    }
+    #keyboard{
+        gap: 25px;
     }
 }
 
