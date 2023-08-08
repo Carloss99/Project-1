@@ -13,12 +13,13 @@ window.onload = () => {
         
     
         enterButton.addEventListener('click', (e) =>{
-            if(input.value === ""){
+            let value = input.value
+            if(value === ""){
 
             }else{
             let spans = wordcontainer.childNodes
             let matchFound = false
-            if(input.value.toLowerCase() === words[currentWord].toLowerCase()){
+            if(value.toLowerCase() === words[currentWord].toLowerCase()){
                 spans.forEach((letter) => {
                     letter.classList.remove("display")
                 })
@@ -33,7 +34,7 @@ window.onload = () => {
                 
             }
             for(let i = 0; i < words[currentWord].length; i++){
-                if(input.value.toLowerCase() === words[currentWord][i].toLowerCase()){
+                if(value.toLowerCase() === words[currentWord][i].toLowerCase()){
                     spans[i].firstChild.classList.remove("no-display")
                     matchTotal++
                     matchFound = true
@@ -52,6 +53,10 @@ window.onload = () => {
                         currentWord++
                         matchTotal = 0
                         setWord()
+                        let keyboard = document.querySelector("#keyboard").childNodes
+                        keyboard.forEach((letter) =>{
+                            letter.style.color = "Black"
+                        })
                         }
                     
                     
@@ -72,6 +77,8 @@ window.onload = () => {
                     
             }
 
+            const clicked = document.querySelector(`#${value}`)
+            clicked.style.color = "red"
             input.value = ""
         }
         })
@@ -80,6 +87,7 @@ window.onload = () => {
             let keyboard = document.querySelector("#keyboard")
             for(let i = 0; i < alphabet.length; i++){
                 let letter = document.createElement("span")
+                letter.setAttribute("id", alphabet[i])
                 letter.innerHTML = alphabet[i]
                 letter.addEventListener(('click'), (e) =>{
                     input.value = letter.innerText
@@ -101,6 +109,7 @@ window.onload = () => {
                 div.appendChild(span)
                 wordcontainer.appendChild(div)
             }
+            
         }
 
         function fetchWords(){
