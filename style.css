@@ -6,7 +6,10 @@ body{
     color: black;
     font-weight: bold;
     font-family: "Chalkboard";
-    background-color: chartreuse;
+    background-image: url("https://cdn4.vectorstock.com/i/1000x1000/58/43/black-chalkboard-background-vector-4305843.jpg");
+    background-size: cover;
+    background-position: center;
+    font-size: .8em;
 }
 
 #title{
@@ -84,7 +87,7 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap:wrap;
-    gap: 40px;
+    gap: 50px;
     line-height: 30px;
 }
 

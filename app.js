@@ -9,6 +9,7 @@ window.onload = () => {
         let input = document.querySelector("#input")
         let hangman = document.querySelector("#hangman")
         fetchWords()
+        setKeyboard()
         
         
     
@@ -21,15 +22,19 @@ window.onload = () => {
             let matchFound = false
             if(value.toLowerCase() === words[currentWord].toLowerCase()){
                 spans.forEach((letter) => {
-                    letter.classList.remove("display")
+                    letter.firstChild.classList.remove("no-display")
                 })
                 matchFound = true
+                input.value = ""
 
                 setTimeout(() =>{
                     currentWord++
                     setWord()
-                    hangman.setAttribute('src', `images/stage0.png`)
-                    alert("all done!")
+                    let keyboard = document.querySelector("#keyboard").childNodes
+                        keyboard.forEach((letter) =>{
+                            letter.style.color = "Black"
+                        })
+                        
                 }, 5000)
                 
             }
@@ -67,19 +72,27 @@ window.onload = () => {
             if(!matchFound){
                 hangman.setAttribute('src', `images/stage${++incorrect}.png`)
                 if(incorrect === 7){
+                    spans.forEach((letter) => {
+                        letter.firstChild.classList.remove("no-display")
+                    })
                     setTimeout(() =>{
                         incorrect = 0
                         alert("You Lose")
                         fetchWords()
+                        let keyboard = document.querySelector("#keyboard").childNodes
+                        keyboard.forEach((letter) =>{
+                            letter.style.color = "Black"
+                        })
                     }, 1000)
                     
                 }
                     
             }
-
+            if(value.length === 1){
             const clicked = document.querySelector(`#${value}`)
             clicked.style.color = "red"
             input.value = ""
+            }
         }
         })
 
@@ -119,7 +132,7 @@ window.onload = () => {
                 console.log(w)
                 words = w
                 setWord()
-                setKeyboard()
+                
             
         })
         }
