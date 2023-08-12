@@ -29,6 +29,7 @@ window.onload = () => {
 
                 setTimeout(() =>{
                     currentWord++
+                    incorrect = 0
                     setWord()
                     let keyboard = document.querySelector("#keyboard").childNodes
                         keyboard.forEach((letter) =>{
