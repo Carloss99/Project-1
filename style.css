@@ -3,7 +3,7 @@ body{
     box-sizing: border-box;
     height: 100vh;
     width:100vw;
-    color: black;
+    color: white;
     font-weight: bold;
     font-family: "Chalkboard";
     background-image: url("https://cdn4.vectorstock.com/i/1000x1000/58/43/black-chalkboard-background-vector-4305843.jpg");
@@ -21,7 +21,7 @@ body{
 
 #title span{
     font-size: 4em;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid white;
     padding: 0px;
     
 }
@@ -152,6 +152,7 @@ body{
     #keyboard{
         font-size:2em;
         width: 90vw;
+        color: white;
     }
     
 

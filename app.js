@@ -56,11 +56,12 @@ window.onload = () => {
                         matchTotal = 0
                     }else{
                         currentWord++
+                        incorrect = 0
                         matchTotal = 0
                         setWord()
                         let keyboard = document.querySelector("#keyboard").childNodes
                         keyboard.forEach((letter) =>{
-                            letter.style.color = "Black"
+                            letter.style.color = "white"
                         })
                         }
                     
